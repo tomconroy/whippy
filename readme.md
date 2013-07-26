@@ -6,7 +6,7 @@ Whippy works by applying padding to both sides of a grid cell, then pulling out 
 
 ### Usage
 
-Copy `_whippy.scss` to your project, declare variables and import:
+Copy `source/css/_whippy.scss` to your project, declare variables and import:
 
 ```scss
 $max-columns: 8;

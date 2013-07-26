@@ -13,6 +13,12 @@ $gutter: 10px !default;
   }
 }
 
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @mixin grid {
   @include clearfix;
   margin-left: -#{$gutter / 2};
@@ -20,6 +26,7 @@ $gutter: 10px !default;
 }
 
 @mixin col($cols, $context: $max-columns) {
+  @include border-box;
   width: percentage($cols / $context);
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;

@@ -1,0 +1,16 @@
+body { margin: 0; background: #58cb8c; font-family: 'Helvetica Neue', Helvetica, sans-serif; }
+
+#wrapper { width: 90%; max-width: 800px; margin: 20px auto; background: white; padding: 20px 40px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; position: relative; }
+
+#overlay { position: absolute; top: 0; left: 40px; right: 40px; height: 100%; z-index: 10; }
+#overlay .overlay-wrapper { *zoom: 1; margin-left: -10px; margin-right: -10px; height: 100%; }
+#overlay .overlay-wrapper:before, #overlay .overlay-wrapper:after { display: table; content: ""; line-height: 0; }
+#overlay .overlay-wrapper:after { clear: both; }
+#overlay .overlay-cell { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 8.33333%; padding-left: 10px; padding-right: 10px; float: left; height: 100%; position: relative; }
+#overlay .overlay-cell:after { content: ''; position: absolute; left: 10px; right: 10px; height: 100%; background: rgba(0, 0, 0, 0.1); }
+
+#intro { *zoom: 1; margin-left: -10px; margin-right: -10px; }
+#intro:before, #intro:after { display: table; content: ""; line-height: 0; }
+#intro:after { clear: both; }
+#intro .intro-one { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 50%; padding-left: 10px; padding-right: 10px; float: left; }
+#intro .intro-two { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 50%; padding-left: 10px; padding-right: 10px; float: left; }
