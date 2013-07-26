@@ -1,0 +1,27 @@
+$max-columns: 12 !default;
+$gutter: 10px !default;
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin grid {
+  @include clearfix;
+  margin-left: -#{$gutter / 2};
+  margin-right: -#{$gutter / 2};
+}
+
+@mixin col($cols, $context: $max-columns) {
+  width: percentage($cols / $context);
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  float: left;
+}
