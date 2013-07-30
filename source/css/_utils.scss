@@ -1,0 +1,11 @@
+@mixin break-small {
+  @media all and (min-width:420px) {
+    @content;
+  }
+}
+
+@mixin break-small {
+  @media all and (min-width:800px) {
+    @content;
+  }
+}

@@ -3,42 +3,69 @@
 $max-columns: 12;
 $gutter: 20px;
 
+@import 'utils';
 @import 'whippy';
 
 $white: #fff;
+$black: #111;
 $green: #58CB8C;
 $teal: #26b0ad;
 $pink: #E65398;
 $grey: #eee;
 
-body {
+* {
+  @include box-sizing(border-box);
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
   margin: 0;
-  background: $green;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  height: 100%;
+  background: $white;
+  position: relative;
+  font: bold 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 a {
-  
+  color: $teal;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: $teal 2px solid;
+  &:hover {
+    border-color: $black;
+  }
+}
+
+p {
+  padding: 0.5em 0 1em;
+  margin: 0;
 }
 
 #wrapper {
   width: 90%;
-  max-width: 800px;
-  margin: 20px auto;
-  background: $white;
-  padding: 20px 40px;
+  max-width: 1200px;
+  min-height: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
   @include border-radius(5px);
   position: relative;
+}
+
+#inner-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 #overlay {
   pointer-events: none;
   position: absolute;
   top: 0;
-  left: 40px;
-  right: 40px;
+  left: 0;
+  right: 0;
   height: 100%;
-  z-index: 10;
+  z-index: 0;
   .overlay-wrapper {
     @include grid;
     height: 100%;
@@ -47,26 +74,60 @@ a {
     @include col(1,12);
     height: 100%;
     position: relative;
-    &:after {
+    &:before {
       content: '';
-      position: absolute;
-      left: $gutter/2;
-      right: $gutter/2;
+      display: block;
       height: 100%;
-      background: rgba(0,0,0,0.1);
+      border-left: rgba($black, 0.15) 1px dashed;
+      border-right: rgba($black, 0.15) 1px dashed;
+      background: rgba($black, 0.03);
     }
   }
 }
 
 
-#intro {
-  @include grid;
+#header {
+  border-bottom: $black 2px solid;
+  margin-bottom: 3em;
+  padding-bottom: 1em;
   
-  .intro-one {
-    @include col(1,2);
+  h1 {
+    font-size: 4em;
+    line-height: 1;
+    margin: 0 0 20px -6px;
   }
   
-  .intro-two {
-    @include col(1,2);
+  @include break-small {
+    
+    // this should normally be on #header, but
+    // the border wouldn't line up with the grid
+    // so we need an extra container for the grid cols
+    .header-wrapper {
+      @include grid;
+    }
+    
+    .header-title {
+      @include col(5,12);
+    }
+    .header-subtitle {
+      @include col(5,12);
+      padding-top: 10px;
+    }
+  }
+}
+
+#examples {
+  clear: left;
+  .example-one {
+    border: rgba(black, 0.5) 1px dashed;
+    p {
+      background: rgba($teal, 0.2);
+    }
+  }
+  @include break-small {
+    @include grid;
+    .example-one {
+      @include col(4,12);
+    }
   }
 }
