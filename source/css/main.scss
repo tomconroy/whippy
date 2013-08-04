@@ -4,14 +4,15 @@ $max-columns: 12;
 $gutter: 20px;
 
 @import 'utils';
+@import 'fonts';
 @import 'whippy';
 
 $white: #fff;
-$black: #111;
-$green: #58CB8C;
-$teal: #26b0ad;
-$pink: #E65398;
+$black: #333;
+$green: #47E86A;
 $grey: #eee;
+
+$light-green: #CFFFC9;
 
 * {
   @include box-sizing(border-box);
@@ -21,17 +22,19 @@ $grey: #eee;
 html, body {
   margin: 0;
   height: 100%;
-  background: $white;
+  background: $light-green;
   position: relative;
-  font: bold 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  @include apercu;
 }
 
 a {
-  color: $teal;
+  color: $green;
   text-decoration: none;
   display: inline-block;
   padding-bottom: 2px;
-  border-bottom: $teal 2px solid;
+  border-bottom: $black 2px solid;
   &:hover {
     border-color: $black;
   }
@@ -44,7 +47,7 @@ p {
 
 #wrapper {
   width: 90%;
-  max-width: 1200px;
+  max-width: 800px;
   min-height: 100%;
   height: 100%;
   margin: 0 auto;
@@ -64,23 +67,21 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
   z-index: 0;
   .overlay-wrapper {
     @include grid;
     height: 100%;
   }
   .overlay-cell {
-    @include col(1,12);
+    @include col(1,6);
     height: 100%;
     position: relative;
     &:before {
       content: '';
       display: block;
       height: 100%;
-      border-left: rgba($black, 0.15) 1px dashed;
-      border-right: rgba($black, 0.15) 1px dashed;
-      background: rgba($black, 0.03);
+      border: $black 1px dashed;
     }
   }
 }
@@ -89,39 +90,32 @@ p {
 #header {
   border-bottom: $black 2px solid;
   margin-bottom: 3em;
-  padding-bottom: 1em;
-  
+  padding: 1em;
+  text-align: center;
+  text-transform: lowercase;
   h1 {
     font-size: 4em;
     line-height: 1;
     margin: 0 0 20px -6px;
+    color: $green;
+  }
+  .header-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   
-  @include break-small {
-    
-    // this should normally be on #header, but
-    // the border wouldn't line up with the grid
-    // so we need an extra container for the grid cols
-    .header-wrapper {
-      @include grid;
-    }
-    
-    .header-title {
-      @include col(5,12);
-    }
-    .header-subtitle {
-      @include col(5,12);
-      padding-top: 10px;
-    }
-  }
+}
+
+#examples-container {
+  position: relative;
 }
 
 #examples {
   clear: left;
   .example-one {
-    border: rgba(black, 0.5) 1px dashed;
+    // border: rgba(black, 0.5) 1px dashed;
     p {
-      background: rgba($teal, 0.2);
+      // background: rgba($green, 0.2);
     }
   }
   @include break-small {

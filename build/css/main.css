@@ -1,34 +1,30 @@
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
-html, body { margin: 0; height: 100%; background: white; position: relative; font: bold 16px/1.5 'Helvetica Neue', Helvetica, sans-serif; }
+html, body { margin: 0; height: 100%; background: #cfffc9; position: relative; font-size: 16px; line-height: 1.5; font-family: "Apercu Medium", Calibri, sans-serif; font-size-adjust: 0.508; font-weight: 600; font-style: normal; }
 
-a { color: #26b0ad; text-decoration: none; display: inline-block; padding-bottom: 2px; border-bottom: #26b0ad 2px solid; }
-a:hover { border-color: #111111; }
+a { color: #47e86a; text-decoration: none; display: inline-block; padding-bottom: 2px; border-bottom: #333333 2px solid; }
+a:hover { border-color: #333333; }
 
 p { padding: 0.5em 0 1em; margin: 0; }
 
-#wrapper { width: 90%; max-width: 1200px; min-height: 100%; height: 100%; margin: 0 auto; padding: 20px 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; position: relative; }
+#wrapper { width: 90%; max-width: 800px; min-height: 100%; height: 100%; margin: 0 auto; padding: 20px 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; position: relative; }
 
 #inner-wrapper { position: relative; z-index: 1; }
 
-#overlay { pointer-events: none; position: absolute; top: 0; left: 0; right: 0; height: 100%; z-index: 0; }
+#overlay { pointer-events: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; }
 #overlay .overlay-wrapper { *zoom: 1; margin-left: -10px; margin-right: -10px; height: 100%; }
 #overlay .overlay-wrapper:before, #overlay .overlay-wrapper:after { display: table; content: ""; line-height: 0; }
 #overlay .overlay-wrapper:after { clear: both; }
-#overlay .overlay-cell { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 8.33333%; padding-left: 10px; padding-right: 10px; float: left; height: 100%; position: relative; }
-#overlay .overlay-cell:before { content: ''; display: block; height: 100%; border-left: rgba(17, 17, 17, 0.15) 1px dashed; border-right: rgba(17, 17, 17, 0.15) 1px dashed; background: rgba(17, 17, 17, 0.03); }
+#overlay .overlay-cell { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 16.66667%; padding-left: 10px; padding-right: 10px; float: left; height: 100%; position: relative; }
+#overlay .overlay-cell:before { content: ''; display: block; height: 100%; border: #333333 1px dashed; }
 
-#header { border-bottom: #111111 2px solid; margin-bottom: 3em; padding-bottom: 1em; }
-#header h1 { font-size: 4em; line-height: 1; margin: 0 0 20px -6px; }
-@media all and (min-width: 800px) { #header .header-wrapper { *zoom: 1; margin-left: -10px; margin-right: -10px; }
-  #header .header-wrapper:before, #header .header-wrapper:after { display: table; content: ""; line-height: 0; }
-  #header .header-wrapper:after { clear: both; }
-  #header .header-title { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 41.66667%; padding-left: 10px; padding-right: 10px; float: left; }
-  #header .header-subtitle { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 41.66667%; padding-left: 10px; padding-right: 10px; float: left; padding-top: 10px; } }
+#header { border-bottom: #333333 2px solid; margin-bottom: 3em; padding: 1em; text-align: center; text-transform: lowercase; }
+#header h1 { font-size: 4em; line-height: 1; margin: 0 0 20px -6px; color: #47e86a; }
+#header .header-subtitle { text-transform: uppercase; letter-spacing: 1px; }
+
+#examples-container { position: relative; }
 
 #examples { clear: left; }
-#examples .example-one { border: rgba(0, 0, 0, 0.5) 1px dashed; }
-#examples .example-one p { background: rgba(38, 176, 173, 0.2); }
 @media all and (min-width: 800px) { #examples { *zoom: 1; margin-left: -10px; margin-right: -10px; }
   #examples:before, #examples:after { display: table; content: ""; line-height: 0; }
   #examples:after { clear: both; }

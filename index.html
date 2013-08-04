@@ -7,43 +7,58 @@
 </head>
 <body>
   <div id="wrapper">
-    <div id="overlay">
-      <div class="overlay-wrapper">
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-        <div class="overlay-cell"></div>
-      </div>
-    </div>
     
     <div id="inner-wrapper">
       <header id="header">
         <div class="header-wrapper">
+          
           <div class="header-title">
             <h1>Whippy</h1>
             <p><a href="https://github.com/tomconroy/whippy" target="_blank">Source</a></p>
           </div>
+          
           <div class="header-subtitle">
-            <p>Super simple SASS mixins for creating flexible, semantic grid systems.</p>
-            <p></p>
+            <p>A deliciously simple responsive grid system</p>
           </div>
+          
         </div>
       </header>
+      
 
-      <div id="examples">
-        <div class="example-one">
-          <p>Whippy works by applying padding to both sides of a grid cell, then pulling out the container sides with negative margins.</p>
+      <div id="examples-container">      
+        <div id="overlay">
+          <div class="overlay-wrapper">
+            <div class="overlay-cell"></div>
+            <div class="overlay-cell"></div>
+            <div class="overlay-cell"></div>
+            <div class="overlay-cell"></div>
+            <div class="overlay-cell"></div>
+            <div class="overlay-cell"></div>
+          </div>
+        </div>
+
+        <div id="examples">
+          <div class="example-one">
+            <p>Whippy works by applying padding to both sides of a grid cell, then pulling out the container sides with negative margins.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
+  <script type="text/javascript">
+  WebFontConfig = { fontdeck: { id: '19609' } };
+
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  </script>
+  
 </body>
 </html>
