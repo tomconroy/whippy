@@ -10,7 +10,7 @@ a:hover { border-color: #333333; }
 
 p { padding: 0.5em 0 1em; margin: 0; }
 
-#wrapper { width: 90%; max-width: 800px; min-width: 320px; min-height: 100%; height: 100%; height: auto !important; margin: 0 auto; padding: 20px 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; position: relative; }
+#wrapper { width: 90%; max-width: 800px; min-width: 320px; min-height: 100%; height: 100%; height: auto !important; margin: 0 auto; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; position: relative; }
 
 #inner-wrapper { position: relative; z-index: 1; }
 
@@ -26,9 +26,11 @@ p { padding: 0.5em 0 1em; margin: 0; }
 #overlay .overlay-cell { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 16.66667%; padding-left: 10px; padding-right: 10px; float: left; height: 100%; position: relative; }
 #overlay .overlay-cell:before { content: ''; display: block; height: 100%; border: #333333 1px dashed; }
 
-#header { border-bottom: #333333 2px solid; margin-bottom: 3em; padding: 1em; text-align: center; text-transform: lowercase; }
+#header { border-bottom: #333333 2px solid; margin-bottom: 3em; text-align: center; text-transform: lowercase; position: relative; overflow: hidden; padding: 6.25% 0; }
 #header h1 { font-size: 4em; line-height: 1; margin: 0 0 20px -6px; color: #47e86a; }
 #header .header-subtitle { text-transform: uppercase; letter-spacing: 1px; }
+
+#cone { position: absolute; top: 10%; left: 50px; width: 25%; min-width: 150px; z-index: -1; }
 
 #examples-container { position: relative; }
 
