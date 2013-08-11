@@ -1,0 +1,12 @@
+$max-columns: 8;
+$gutter: 30px;
+
+@import "../whippy";
+
+.grid {
+  @include whip;
+}
+
+.col {
+  @include col(2, 7);
+}
