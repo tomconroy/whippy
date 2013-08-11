@@ -1,0 +1,48 @@
+* {
+  @include box-sizing(border-box);
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  position: relative;
+  font-size: #{$base}px;
+  line-height: 1.5;
+  @include apercu;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5em;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  @include font-size(12);
+  color: $red;
+  margin-top: 0.5em;
+}
+
+code {
+  @include apercu-mono;
+  @include font-size(14);
+  line-height: 1;
+  white-space: pre;
+  padding: 10px;
+}
+
+a {
+  color: $green;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: $black 2px solid;
+  &:hover {
+    border-color: $black;
+  }
+}
+
+p {
+  margin: 0 0 0.5em;
+}

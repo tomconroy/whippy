@@ -11,46 +11,68 @@
     <div id="handle-bar">
       <a id="handle" href="#"></a>
     </div>
-    
-    <div id="inner-wrapper">
-      <header id="header">
-        <div class="header-wrapper">
-          
-          <div class="header-title">
-            <h1>Whippy</h1>
-            <p><a href="https://github.com/tomconroy/whippy" target="_blank">Source</a></p>
-          </div>
-          
-          <div class="header-subtitle">
-            <p>A deliciously simple grid system for SASS</p>
-          </div>
-          
-          <img src="build/img/cone.svg" id="cone" />
-          
-        </div>
-      </header>
-      
-
-      <div id="examples-container">      
-        <div id="overlay">
-          <div class="overlay-wrapper">
-            <div class="overlay-cell"></div>
-            <div class="overlay-cell"></div>
-            <div class="overlay-cell"></div>
-            <div class="overlay-cell"></div>
-            <div class="overlay-cell"></div>
-            <div class="overlay-cell"></div>
-          </div>
-        </div>
-
-        <div id="examples">
-          <div class="example-one">
-            <p>Whippy works by applying padding to both sides of a grid cell, then pulling out the container sides with negative margins.</p>
-          </div>
-        </div>
+  
+    <div id="overlay">
+      <div class="overlay-wrapper">
+        <div class="overlay-cell"></div>
+        <div class="overlay-cell"></div>
+        <div class="overlay-cell"></div>
+        <div class="overlay-cell"></div>
+        <div class="overlay-cell"></div>
+        <div class="overlay-cell"></div>
       </div>
     </div>
-  </div>
+    
+    <div id="intro">
+      
+      <div class="header">
+        <h1 class="header-title">Whippy</h1>
+        <h3 class="header-subtitle">A fluid grid system</h3>
+      </div>
+      
+      <div class="usage">
+        <div class="usage-wrapper">
+          <code>$gutter: 20px;
+$max-columns: 8;
+
+@import ‘whippy’;
+
+.grid-container { 
+  @include whip;
+}
+
+.grid-column {
+  @include col($cols, [$context]);
+}</code>
+        </div>
+      </div>
+      
+      <div class="cool-cone">
+        <img src="build/img/cool-cone.svg" alt="Cool" />
+      </div>
+      
+      <p class="about">Whippy is a handful of SASS/LESS/Stylus mixins for creating simple, fluid grid columns.</p>
+      
+      <div class="yeah-cone">
+        <img src="build/img/yeah-cone.svg" alt="Yeah" />
+      </div>
+      
+      <div class="how-it-works">
+        <h3>How it works</h3>
+        <p>The width of a grid cell is its number of columns divided by its container’s columns. Gutters are added with padding, and a container pulls left and right gutters back out with negative margins. This way content inside whippy columns will always align with non-grid content outside.</p>
+      </div>
+      
+      <div class="keep-in-mind">
+        <h3>Keep in mind</h3>
+        <ul>
+          <li>Grid containers must be width: auto for the negative margin trick to work</li>
+          <li>Nest elements inside grid columns to add backgrounds and borders</li>
+        </ul>
+      </div>
+      
+    </div> <!-- #intro -->
+    
+  </div> <!-- #wrapper -->
   
   <script type="text/javascript">
   WebFontConfig = { fontdeck: { id: '19609' } };
