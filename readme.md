@@ -33,7 +33,7 @@ Include `grid` on containers and `col($number, $context)` on grid cells. E.g. an
 
 ```scss
 .grid-container {
-  @include grid;
+  @include whip;
 }
 .grid-cell {
   @include col(6,12);

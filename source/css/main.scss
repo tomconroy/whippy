@@ -102,7 +102,7 @@ p {
   bottom: 0;
   z-index: 0;
   .overlay-wrapper {
-    @include grid;
+    @include whip;
     height: 100%;
   }
   .overlay-cell {
@@ -161,7 +161,7 @@ p {
     }
   }
   @include break-small {
-    @include grid;
+    @include whip;
     .example-one {
       @include col(4,12);
     }
