@@ -29,11 +29,11 @@ Markup should look a bit like this:
 </div>
 ```
 
-Include `grid` on containers and `col($number, $context)` on grid cells. E.g. an element that spans 1/3 of its container will be `@include col(1,3)` (or `col(8,12)`).
+Include `whip` on containers and `col($number, $context)` on grid cells. E.g. an element that spans 1/3 of its container will be `@include col(1,3)` (or `col(8,12)`).
 
 ```scss
 .grid-container {
-  @include grid;
+  @include whip;
 }
 .grid-cell {
   @include col(6,12);
